@@ -1,0 +1,73 @@
+ 
+-- 
+-- Base de datos: `camba`
+-- 
+
+-- --------------------------------------------------------
+
+-- 
+-- Estructura de tabla para la tabla `proyectos`
+-- 
+
+CREATE TABLE `proyectos` (
+  `id` bigint(20) NOT NULL auto_increment,
+  `id_usuario` bigint(20) NOT NULL,
+  `Proyecto` varchar(100) NOT NULL,
+  PRIMARY KEY  (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
+
+-- 
+-- Volcar la base de datos para la tabla `proyectos`
+-- 
+
+INSERT INTO `proyectos` VALUES (1, 1, 'Test1');
+INSERT INTO `proyectos` VALUES (2, 1, 'Pabitos en fuga');
+
+-- --------------------------------------------------------
+
+-- 
+-- Estructura de tabla para la tabla `tablero`
+-- 
+
+CREATE TABLE `tablero` (
+  `id` bigint(20) NOT NULL auto_increment,
+  `id_proyecto` bigint(20) NOT NULL,
+  `seccion` varchar(50) NOT NULL,
+  `contenido` varchar(400) NOT NULL,
+  PRIMARY KEY  (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=15 ;
+
+-- 
+-- Volcar la base de datos para la tabla `tablero`
+-- 
+
+INSERT INTO `tablero` VALUES (6, 2, 'Actividades clave', 'def');
+INSERT INTO `tablero` VALUES (5, 2, 'Asociaciones clave', 'abc');
+INSERT INTO `tablero` VALUES (7, 2, 'Recursos clave', 'hiuj');
+INSERT INTO `tablero` VALUES (8, 2, 'Propuestas de valor', '11');
+INSERT INTO `tablero` VALUES (9, 2, 'Canales', '22');
+INSERT INTO `tablero` VALUES (10, 2, 'Fuente de ingresos', 'platita');
+INSERT INTO `tablero` VALUES (11, 2, 'Estructura de costos', '666');
+INSERT INTO `tablero` VALUES (12, 2, 'Propuestas de valor', 'y67766');
+INSERT INTO `tablero` VALUES (13, 2, 'Segmentos', 'asdasdasd');
+INSERT INTO `tablero` VALUES (14, 2, 'Relaciones con clientes', 'asdasdasdasd');
+
+-- --------------------------------------------------------
+
+-- 
+-- Estructura de tabla para la tabla `users`
+-- 
+
+CREATE TABLE `users` (
+  `id` bigint(20) NOT NULL auto_increment,
+  `correo` varchar(255) NOT NULL,
+  `password` varchar(50) NOT NULL,
+  PRIMARY KEY  (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
+
+-- 
+-- Volcar la base de datos para la tabla `users`
+-- 
+
+INSERT INTO `users` VALUES (1, 'maldinid102@gmail.com', 'arbol');
+INSERT INTO `users` VALUES (2, 'nicole@gmail.com', '112233');
